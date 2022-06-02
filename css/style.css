@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+canvas{
+    width: 100%;
+    height: 100vh;    
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    left: 50px;
+}
+
+.game-board {
+    width: 80%;
+    height: 500px;
+    border: 1px solid #000;
+    margin: 0 auto;
+    background: url("../medea/bg1.jpg");
+    background-size: contain;
+    position: relative;
+    overflow: hidden;
+}
+
+.vilao {
+    position: absolute;
+    bottom: 60px;
+    width: 200px;    
+    transform: rotate(-10deg);
+    animation: vilao-animation 1.2s infinite linear;
+
+
+}
+
+.sonic {
+    position: absolute;
+    width: 150px;
+    bottom: 57px;
+    left: 150px;
+}
+
+.jump {
+    animation: sonic-jump 500ms ease-out;
+}
+
+.bruxa{
+    position: absolute;
+    width: 100px;
+    bottom: 350px;
+    animation: bruxa-voando 15s infinite linear;
+    
+}
+
+@keyframes vilao-animation {
+    from {
+        right: -200px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes sonic-jump {
+    0% {
+        bottom: 57px;
+    }
+
+    40% {
+        bottom: 210px;
+    }
+
+    50% {
+        bottom: 210px;
+    }
+
+    
+
+    90% {
+        bottom: 210px;
+    }
+
+    100% {
+        bottom: 57px;
+    }
+}
+
+@keyframes bruxa-voando {
+    from{
+    left: -500px;
+    }
+
+    to{
+        left: 100%;
+    }
+}
