@@ -27,7 +27,7 @@ canvas{
 .vilao {
     position: absolute;
     bottom: 60px;
-    width: 200px;    
+    width: 150px;    
     transform: rotate(-10deg);
     animation: vilao-animation 1.2s infinite linear;
 
