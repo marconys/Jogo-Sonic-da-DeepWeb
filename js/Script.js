@@ -15,16 +15,24 @@ const jump = () => {
 
 // capturar colisão entre os elementos
 
-const loop = setInterval(function colisao() {
+const loop = setInterval(function colisao(ctx) {
 
     const vilaoPosition = vilao.offsetLeft;
     const sonicPosition = +window.getComputedStyle(sonic).bottom.replace('px', '');
     console.log(sonicPosition)
 
-    if (vilaoPosition <= 210 && vilaoPosition > 0 && sonicPosition <200) {
+    if (vilaoPosition <= 180 && vilaoPosition > 0 && sonicPosition <160) {
         vilao.style.animation = 'none';
-        vilao.style.left = `${vilaoPosition}px`;
-    }
+        vilao.style.left = `${vilaoPosition}px`;        
+    };
+
+    if(vilaoPosition <= 0){
+
+        pontos++;
+    };
+
+
+    
 
 
 }, 10);

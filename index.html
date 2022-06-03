@@ -16,6 +16,12 @@
 <body>
     <div class="game-board">
 
+        <div class="nuvens">
+            <img src="./medea/nuvem.png" alt="" class="nuvem2">
+            <img src="./medea/nuvem.png" alt="" class="nuvem1">
+            <img src="./medea/nuvem.png" alt="" class="nuvem">
+        </div>       
+
         <img src="./medea/bruxa.gif" alt="" class="bruxa">
         <img src="./medea/sonicdeepweb.gif" alt="" class="sonic">
         <img src="./medea/vilaodeepweb.gif" alt="" class="vilao">
@@ -27,13 +33,14 @@
         <script type="text/javascript">
 
             let pontos = 0;
+            let bonus = 10;
 
             let canvas = document.getElementById("game-board");
             let ctx = canvas.getContext('2d');
 
 
 
-            const placar = new Placar(ctx)
+            const placar = new Placar(ctx);
 
             const game = () => {
 
