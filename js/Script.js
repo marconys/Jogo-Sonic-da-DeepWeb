@@ -1,6 +1,13 @@
 const sonic = document.querySelector('.sonic');
 const vilao = document.querySelector('.vilao');
 
+// Recarregar pagina "refresh" (reinícia o jogo)
+let btn = document.querySelector(".iniciar");
+btn.addEventListener("click", function() {
+    
+    location.reload();
+});
+
 //função jump
 const jump = () => {
     sonic.classList.add('jump');
@@ -22,16 +29,17 @@ const loop = setInterval(function colisao(ctx) {
     console.log(sonicPosition)
 
     if (vilaoPosition <= 180 && vilaoPosition > 0 && sonicPosition <160) {
+        //para o jogo
         vilao.style.animation = 'none';
-        vilao.style.left = `${vilaoPosition}px`;        
+        vilao.style.left = `${vilaoPosition}px`; 
+       
+            
     };
 
     if(vilaoPosition <= 0){
 
         pontos++;
     };
-
-
     
 
 
@@ -40,3 +48,5 @@ const loop = setInterval(function colisao(ctx) {
 
 // addEventListener para captura de eventos / passando como parametros o evento e a função
 document.addEventListener('keydown', jump);
+
+
