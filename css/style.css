@@ -50,8 +50,7 @@ canvas {
 .vilao {
     position: absolute;
     bottom: 0px;
-    width: 100px;
-    transform: rotate(-10deg);
+    width: 100px;    
     animation: vilao-animation 1.2s infinite linear;
 
 

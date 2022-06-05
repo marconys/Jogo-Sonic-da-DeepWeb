@@ -28,7 +28,7 @@ const loop = setInterval(function colisao(ctx) {
     const sonicPosition = +window.getComputedStyle(sonic).bottom.replace('px', '');
     console.log(sonicPosition)
 
-    if (vilaoPosition <= 180 && vilaoPosition > 0 && sonicPosition <160) {
+    if (vilaoPosition <= 190 && vilaoPosition > 0 && sonicPosition <160) {
         //para o jogo
         vilao.style.animation = 'none';
         vilao.style.left = `${vilaoPosition}px`; 
